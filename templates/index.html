@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container mt-5">
-    <h1 class="text-center mb-4">Пейзажи Марса</h1>
+<div class="gallery-container">
+    <h1 class="text-center mb-4">Галерея марсианских пейзажей</h1>
 
     <div id="marsCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -29,5 +29,17 @@
             <span class="carousel-control-next-icon"></span>
         </button>
     </div>
+
+    <div class="upload-form mb-5">
+        <form method="POST" enctype="multipart/form-data" class="row g-3">
+            <div class="col-auto">
+                <input type="file" class="form-control" name="file" accept="image/*" required>
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary">Загрузить</button>
+            </div>
+        </form>
+    </div>
+
 </div>
 {% endblock %}
