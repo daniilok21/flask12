@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="member-card">
+    <h1 class="member-name">{{ member.name }} {{ member.surname }}</h1>
+
+    <div class="photo-container">
+        <img src="{{ member.photo }}"
+             alt="{{ member.name }} {{ member.surname }}"
+             class="member-photo-full">
+    </div>
+
+    <div class="member-info">
+        <p class="specialties-list">
+            {{ member.specialties|sort|join(", ") }}
+        </p>
+    </div>
+</div>
+{% endblock %}

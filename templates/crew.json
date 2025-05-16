@@ -1,0 +1,22 @@
+{
+    "crew": [
+        {
+            "name": "Иван",
+            "surname": "Иванов",
+            "photo": "/static/images/ivanov.jpg",
+            "specialties": ["Капитан", "Механик"]
+        },
+        {
+            "name": "Петр",
+            "surname": "Петров",
+            "photo": "/static/images/petrov.jpg",
+            "specialties": ["Халявщик", "Блогер"]
+        },
+        {
+            "name": "Сидор",
+            "surname": "Сидоров",
+            "photo": "/static/images/sidorov.jpeg",
+            "specialties": ["Биолог", "Астроном", "Физик"]
+        }
+    ]
+}

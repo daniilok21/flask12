@@ -1,6 +1,8 @@
+import random
 from flask import Flask, render_template, request, redirect, url_for, flash
 import os
 from werkzeug.utils import secure_filename
+import json
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandex_luceum_secret_key'
@@ -39,6 +41,15 @@ def index():
             return redirect(url_for('index'))
 
     return render_template('index.html', images=images)
+
+
+@app.route('/member')
+def member():
+    with open('templates/crew.json', 'r', encoding='utf-8') as f:
+        crew_data = json.load(f)
+
+    random_member = random.choice(crew_data['crew'])
+    return render_template('member.html', member=random_member)
 
 
 if __name__ == '__main__':
